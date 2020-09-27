@@ -51,8 +51,8 @@ class QuestionIndexViewTest(TestCase):
         """
         response = self.client.get(reverse('polls:index'))
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, 'No polls are avaiable.')
-        self.assertQuerysetEqual(response.context['latest_questions_list'], [])
+        self.assertContains(response, 'No polls are available.')
+        self.assertQuerysetEqual(response.context['latest_question_list'], [])
     
     def test_past_questions(self):
         """
@@ -62,8 +62,8 @@ class QuestionIndexViewTest(TestCase):
         create_question(question_text="Past question.", days=-30)
         response = self.client.get(reverse('polls:index'))
         self.assertQuerysetEqual(
-            response.context['latest_questions_list'],
-            ['<Question: Past question.>']
+            response.context['latest_question_list'],
+            ['<Question: Past question....>']
         )
     
     def test_future_questions(self):
@@ -73,8 +73,8 @@ class QuestionIndexViewTest(TestCase):
         """
         create_question(question_text="Future question.", days=30)
         response = self.client.get(reverse('polls:index'))
-        self.assertContains(response, 'No polls are avaiable.')
-        self.assertQuerysetEqual(response.context['latest_questions_list'], [])
+        self.assertContains(response, 'No polls are available.')
+        self.assertQuerysetEqual(response.context['latest_question_list'], [])
     
     def test_future_question_and_past_question(self):
         """
@@ -86,7 +86,7 @@ class QuestionIndexViewTest(TestCase):
         response = self.client.get(reverse('polls:index'))
         self.assertQuerysetEqual(
             response.context['latest_question_list'],
-            ['<Question: Past question.>']
+            ['<Question: Past question....>']
         )
     
     def test_two_past_questions(self):
@@ -98,7 +98,6 @@ class QuestionIndexViewTest(TestCase):
         response = self.client.get(reverse('polls:index'))
         self.assertQuerysetEqual(
             response.context['latest_question_list'],
-            ['<Question: Past question 2.>', '<Question: Past question 1.>']
+            ['<Question: Past question 2....>', '<Question: Past question 1....>']
         )
-    
     
