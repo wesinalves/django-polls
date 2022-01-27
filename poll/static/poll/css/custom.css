@@ -1,0 +1,177 @@
+body, html {
+    font-family: 'Roboto', sans-serif;    
+    background-color: #f8f8f8;
+}
+
+#header {
+    background-color: #165abf;
+    color: #fff;
+}
+
+#header #site-name a img {
+    width: 256px;
+    margin-top: -4px;
+}
+
+body.login #header #site-name {
+    padding: 10px 0;
+}
+
+body.login #header #site-name a img {
+    margin-top: 0px;
+}
+
+#header #site-name a {
+    font-weight: 400;
+}
+
+#header #site-name a .light {
+    font-weight: 100;
+}
+
+#branding h1,
+#branding h1 a:link,
+#branding h1 a:visited {
+    color: #fff;
+}
+
+.module h2,
+.module caption,
+.inline-group h2 {
+    background: #0042b2;
+    border-radius: 3px;
+}
+
+a:link,
+a:visited {
+    color: #22313f;
+}
+
+.button,
+input[type=submit],
+input[type=button],
+.submit-row input,
+a.button {
+    background-image: linear-gradient(to bottom, #337ab7 0, #265a88 100%);
+    color: #fff;
+}
+
+body.dashboard h1 {
+    font-size: 26px;
+}
+
+div.breadcrumbs {
+    background: #0042b2;
+    color: #fff;
+}
+
+div.breadcrumbs a {
+    color: #c4dce8;
+}
+
+#content-related {
+    background: none;
+}
+
+#content-related .module {
+    background: #f8f8f8;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.messagelist li a {
+    text-decoration: underline;
+}
+
+#nav-sidebar {
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 845px) {
+    #user-tools {
+        font-size: 10px;
+        float: none;
+    }
+}
+
+@media (max-width: 767px) {
+    #header #site-name {
+        text-align: center;
+    }
+    #content h1 {
+        text-align: center;
+    }
+}
+
+.login .form-row input[type="text"],
+.login .form-row input[type="password"] {
+    clear: both;
+    padding: 8px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+}
+
+.align-center {
+    text-align: center;
+}
+
+#changelist #toolbar {
+    border-radius: 5px;
+}
+
+#changelist-filter {
+    border-radius: 5px;
+}
+
+#changelist-filter h2 {
+    padding: 10px 15px !important;
+}
+
+#box {
+    width: auto;    
+    max-width: 480px;
+    margin: 50px auto;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;    
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#info {
+    margin-left: 10px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+#action {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    font-size: 0.7rem;
+}
+
+.report-button {
+    background-image: linear-gradient(to bottom, #337ab7 0, #265a88 100%);
+    color: #fff;
+    padding: 10px 15px;
+    background: #265a88;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 5px;
+}
